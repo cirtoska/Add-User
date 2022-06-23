@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add New User</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script
+      src="https://kit.fontawesome.com/423f2883f2.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./addUser.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <nav>
+          <a href="./index.html"><i class="fa-solid fa-angle-left"></i> Home</a>
+          <button>
+            <a href="./create-user.html"
+              >Add User <i class="fa-solid fa-user-astronaut"></i
+            ></a>
+          </button>
+        </nav>
+      </header>
+      <form method="POST" enctype="multipart/form-data">
+        <fieldset>
+          <label for="firstName"><strong>First Name:</strong> </label>
+          <input type="text" name="firstName" id="firstName" />
+        </fieldset>
+        <fieldset>
+          <label for="maidenName"><strong>Maiden Name: </strong></label>
+          <input type="text" name="maidenName" id="maidenName" />
+        </fieldset>
+        <fieldset>
+          <label for="lastName"><strong>Last Name: </strong></label>
+          <input type="text" name="lastName" id="lastName" />
+        </fieldset>
+        <fieldset>
+          <label for="homeTown"><strong>Home Town:</strong></label>
+          <input type="text" name="homeTown" id="homeTown" />
+        </fieldset>
+        <fieldset>
+          <label for="email"><strong>Email:</strong></label>
+          <input type="email" name="email" id="email" />
+        </fieldset>
+        <fieldset>
+          <label for="phone"><strong>Phone:</strong></label>
+          <input type="phone" name="phone" id="phone" />
+        </fieldset>
+        <fieldset>
+          <label for="webPage"><strong>Website:</strong></label>
+          <input type="text" name="webPage" id="webPage" />
+        </fieldset>
+        <fieldset>
+          <label for="university"><strong>University:</strong></label>
+          <input type="text" name="university" id="university" />
+        </fieldset>
+        <fieldset>
+          <label for="birthDate"><strong>Date of Birth:</strong></label>
+          <input type="date" name="birthDate" id="birthDate" />
+        </fieldset>
+        <fieldset>
+          <label for="bloodType"><strong>Blood Type:</strong></label>
+          <input type="text" name="bloodType" id="bloodType" />
+        </fieldset>
+        <fieldset>
+          <label for="height"><strong>Height:</strong></label>
+          <input type="number" name="height" id="height" placeholder="cm" />
+        </fieldset>
+        <fieldset>
+          <label for="weight"><strong>Weight:</strong></label>
+          <input type="number" name="weight" id="weight" placeholder="kg" />
+        </fieldset>
+        <fieldset>
+          <label for="profilePicture"
+            ><strong>Upload Profile Picture:</strong></label
+          >
+          <input
+            type="file"
+            name="profilePicture"
+            id="profilePicture"
+            accept="image/png, image/jpeg"
+          />
+        </fieldset>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
