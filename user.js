@@ -1,24 +1,23 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const urlParams = new URLSearchParams(window.location.search);
+  const urlParams = new URLSearchParams(window.location.search);
 
-    const userId = urlParams.get("userId");
-    console.log(userId);
-    fetch(`https://dummyjson.com/users/${userId}`)
+  const userId = urlParams.get("userId");
+  console.log(userId);
+  fetch(`https://dummyjson.com/users/${userId}`)
     .then((response) => response.json())
     .then((json) => addUser(json));
 
-
   function addUser(users) {
-console.log(users.image);
-// let imageApi = `${users.image}`;
-// let imagePng = imageApi.slice(0, imageApi.length-20);
-// console.log(imagePng);
-      document.getElementById('user').innerHTML += `<div class="user">
+    console.log(users.image);
+    // let imageApi = `${users.image}`;
+    // let imagePng = imageApi.slice(0, imageApi.length-20);
+    // console.log(imagePng);
+    document.getElementById("user").innerHTML += `<div class="user">
       <img src="${users.image}">
       <h1>${users.firstName} ${users.maidenName} ${users.lastName}</h1>
 
       </div>
-      <div class="userInfo">
+      <div class="profile">
       <div class="basicInfo">
       <p><i class="fa-solid fa-house icons"></i> Lives in ${users.address.city}, ${users.address.state}</p>
       <p><i class="fa-solid fa-at icons"></i> <a href="mailto:${users.email}">${users.email}</a></p>
@@ -34,7 +33,5 @@ console.log(users.image);
       <p><strong>Eye Color:</strong> ${users.eyeColor} | <strong>Hair:</strong> ${users.hair.type}, ${users.hair.color}</p>
       </div>
       </div>`;
-    
-}
-
+  }
 });

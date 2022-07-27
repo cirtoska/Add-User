@@ -20,18 +20,13 @@ body {
 h1.title {
     text-align: center;
     text-transform: uppercase;
+    margin-bottom: 2rem;
 }
 #allUsers {
     display: flex;
     flex-direction: column;
     max-width: 70%;
     margin: auto;
-    /* display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    justify-content: center;
-    align-content: center; */
-    
 }
 
 .userID {
@@ -116,12 +111,12 @@ button a:hover {
 
 }
 
-.userInfo {
+.profile {
     display: flex;
     justify-content: space-evenly;
 }
 
-.userInfo p {
+.profile p {
     padding-bottom: 1rem;
 }
 .basicInfo a {
@@ -144,6 +139,7 @@ form {
     flex-wrap: wrap;
     width: 500px;
     margin: auto;
+    max-width: 100%;
 }
 
 
@@ -158,12 +154,32 @@ input, label {
     width: 100%;
 }
 
-/* #contact-modal {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.5);
-} */
+@media screen and (max-width: 800px) {
+    .container {
+            max-width: 100%;
+
+        }
+        .user img {
+            width: 200px;
+        }
+        .userInfo {
+            display: flex;
+            flex-direction: column;
+        }
+        .profile {
+            text-align: center;
+            flex-direction: column;
+        }
+        .address {
+            padding-left: 0;
+        }
+    
+    .userID {   
+        flex-direction: column;
+        gap: 1rem;
+        border-bottom: 1px solid #f1f1f1;
+        padding-bottom: 1.5rem;
+    }
+
+
+}
